@@ -1,0 +1,190 @@
+  <!DOCTYPE html>
+  <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Dashboard</title>
+
+    <style>
+    .tipo{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tipo .tipoCard{
+    position: relative;
+    cursor: pointer;
+}
+
+.tipo .tipoCard .tipoFace{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.tipo .tipoCard .tipoFace.tipoFace1{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.tipo .tipoCard:hover .tipoFace.tipoFace1{
+    background: #85c41e;
+    transform: translateY(0);
+}
+
+.tipo .tipoCard-2:hover .tipoFace.tipoFace1{
+    background: #ffb500;
+    transform: translateY(0);
+}
+
+.tipo .tipoCard-3:hover .tipoFace.tipoFace1{
+    background: #26c3ac;
+    transform: translateY(0);
+}
+
+.tipo .tipoCard-4:hover .tipoFace.tipoFace1{
+    background: #00a9d1;
+    transform: translateY(0);
+}
+
+.tipo .tipoCard .tipoFace.tipoFace .tipoCont{
+    transition: 0.5s;
+}
+
+.tipo .tipoCard:hover .tipoFace.tipoFace1 .tipoCont{
+    opacity: 1;
+}
+
+.tipo .tipoCard .tipoFace.tipoFace1 .tipoCont{
+    max-width: 100px;
+}
+
+.tipo .tipoCard .tipoFace.tipoFace1 .tipoCont{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #000;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.tipo .tipoCard .tipoFace.tipoFace2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(-100px);
+}
+
+.tipo .tipoCard:hover .tipoFace.tipoFace2{
+    transform: translateY(0);
+}
+
+.tipo .tipoCard .tipoFace.tipoFace2 .tipoCont .parag{
+    margin: 0;
+    padding: 0;
+}
+
+.tipo .tipoCard .tipoFace.tipoFace2 .tipoCont .buton{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.tipo .tipoCard .tipoFace.tipoFace2 .tipoCont .buton:hover{
+    background: #333;
+    color: #fff;
+}
+
+h1 {
+  color: #000;
+  position: absolute;
+}</style>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="https://i.ibb.co/fvNpKyD/77-0-3865.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Strux
+    </a>
+</nav>
+    <div class="container">
+        <div style="margin:20px auto 0px auto;padding-bottom:60px;">
+                <h1>Tipologias</h1>
+            </div>
+        <div class="tipo">
+            <div class="tipoCard">
+        <div class="tipoFace tipoFace1">
+                    <div class="tipoCont">
+                        <img src="https://www.gbcbrasil.org.br/wp-content/uploads/2019/06/tipologia-bdc.png">
+                    </div>
+                </div>
+                <div class="tipoFace tipoFace2">
+                    <div class="tipoCont">
+                        <p class="parag">O LEED BD+C possui adaptações específicas para se adequar às diversas tipologias de projeto.</p>
+                            <a href="#" class="buton">Cadatrar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tipoCard tipoCard-2">
+                <div class="tipoFace tipoFace1">
+                    <div class="tipoCont">
+                        <img src="https://www.gbcbrasil.org.br/wp-content/uploads/2019/06/tipologia-idc.png">
+                    </div>
+                </div>
+                <div class="tipoFace tipoFace2">
+                    <div class="tipoCont">
+                        <p>O LEED ID+C permite a oportunidade de desenvolver espaços internos que sejam melhores para o planeta e para as pessoas.</p>
+                            <a href="#"class="buton">Cadastrar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tipoCard tipoCard-3">
+                <div class="tipoFace tipoFace1">
+                    <div class="tipoCont">
+                        <img src="https://www.gbcbrasil.org.br/wp-content/uploads/2019/06/tipologia-om.png">
+                    </div>
+                </div>
+                <div class="tipoFace tipoFace2">
+                    <div class="tipoCont">
+                        <p>O LEED O+M oferece aos edifícios existentes uma oportunidade de melhorar suas operações.</p>
+                            <a href="#" class="buton">Cadastrar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tipoCard tipoCard-4">
+                <div class="tipoFace tipoFace1">
+                    <div class="tipoCont">
+                        <img src="https://www.gbcbrasil.org.br/wp-content/uploads/2019/06/tipologia-nd.png">
+                    </div>
+                </div>
+                <div class="tipoFace tipoFace2">
+                    <div class="tipoCont">
+                        <p>O LEED ND foi projetado para inspirar e ajudar a criar bairros melhores, mais sustentáveis e bem conectados.</p>
+                            <a href="#" class="buton">Cadastrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+  </html>
